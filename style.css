@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    background: linear-gradient(-45deg, #e798e8, #c3c8ff, #f5d0ff);
+    background-size: 300% 300%;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* Animated Background */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Glass Card */
+.login_form {
+    width: 100%;
+    max-width: 480px;
+    padding: 35px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 18px;
+
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #111;
+    font-size: 26px;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sidebar h2 {
+    font-size: 34px;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.sidebar span {
+    letter-spacing: 6px;
+    font-size: 14px;
+    margin-top: 5px;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.sidebar::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 0;
+
+    width: 2px;
+    height: 100%;
+
+    background: linear-gradient(#626cd6, transparent);
+}
+
+/* Gradient Box */
+.gradient-box {
+    width: 100%;
+    height: 220px;
+
+    border-radius: 15px;
+    margin-bottom: 20px;
+
+    background: linear-gradient(to left top, #5665E9, #A271F8);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Rows */
+.row {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.column {
+    flex: 1;
+}
+
+.column p {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #111;
+}
+
+/* Select Box */
+.select-box {
+    background: rgba(255, 255, 255, 0.3);
+
+    border-radius: 10px;
+    padding: 10px 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.select-box select {
+    width: 100%;
+    border: none;
+    outline: none;
+
+    background: transparent;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Colors */
+.colors {
+    display: flex;
+    gap: 10px;
+}
+
+.colors input {
+    width: 100%;
+    height: 45px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Textarea */
+.gradient-code {
+    width: 100%;
+    min-height: 90px;
+
+    resize: none;
+    border: none;
+    outline: none;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.25);
+
+    color: #111;
+    font-size: 14px;
+    font-weight: 500;
+
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.generator-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.generator-buttons button {
+    flex: 1;
+    height: 50px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(135deg, #626cd6, #8f9bff);
+
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.generator-buttons button:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+.generator-buttons button:active {
+    transform: scale(0.97);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .login_form {
+        padding: 25px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .generator-buttons {
+        flex-direction: column;
+    }
+}
